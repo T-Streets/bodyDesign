@@ -1,14 +1,9 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import App from './Components/App';
 import '../styles.scss';
 
-const App = () => {
-    return (
-        <div>
-            <h2>When the fiya starts to burn. Things begin to REACT</h2>
-        </div>
-
-    )
-}
-
-render(<App />, document.getElementById('app'));
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);
