@@ -4,7 +4,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <h2>When the fiya starts to burn. Code starts to REACT</h2>
+                <h2>When the fiya starts to burn. Code starts to React</h2>
             </div>
         )
     }
