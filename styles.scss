@@ -1,8 +1,18 @@
 body {
     background-color: #232323;
     color: crimson;
+    text-align: center;
 }
 
 h2 {
     text-align: center;
+}
+
+formContainer {
+    display: flex;
+}
+
+form {
+    align-content: center;
+    justify-content: center;
 }
