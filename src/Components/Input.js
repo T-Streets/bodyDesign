@@ -9,7 +9,7 @@ export default class Input extends Component {
            height: '',
            age: '',
            selectedOption: '',
-           BRM: ''
+           BMR: ''
         }
     }
 
@@ -39,7 +39,7 @@ export default class Input extends Component {
         }
         let total = Math.floor(66 + (6.2 * this.state.weight) + (12.7 * this.state.height) - (6.76 * this.state.age))
         this.setState({
-            BRM: total
+            BMR: total
         })
         console.log(this.state)
         console.log(total)
