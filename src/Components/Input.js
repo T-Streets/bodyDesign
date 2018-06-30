@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Form from './Form';
 
-export default class BmrCalc extends Component {
+export default class Input extends Component {
     constructor() {
         super()
         this.state = {
@@ -9,14 +9,16 @@ export default class BmrCalc extends Component {
            height: '',
            age: '',
            selectedOption: '',
-           BMR: '',
+           BRM: ''
         }
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state)
+        return this.getBMR()
     }
+
 
     handleOption = (e) => {
         this.setState({
@@ -30,6 +32,19 @@ export default class BmrCalc extends Component {
         })
     }
 
+    getBMR = () => {
+        if(this.state.selectedOption === 'female') {
+            let total = Math.floor(655.1 + (4.35 * this.state.weight) + (4.7 * this.state.height) - (4.7 * this.state.age)) 
+            return total
+        }
+        let total = Math.floor(66 + (6.2 * this.state.weight) + (12.7 * this.state.height) - (6.76 * this.state.age))
+        this.setState({
+            BRM: total
+        })
+        console.log(this.state)
+        console.log(total)
+
+    }
 
     render() {
         return (
@@ -39,6 +54,7 @@ export default class BmrCalc extends Component {
                 handleOption={this.handleOption} 
                 handleChange={this.handleChange} 
                 selectedOption={this.state.selectedOption} 
+                state={this.state}
                 />
             </div>
         )

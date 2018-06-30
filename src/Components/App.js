@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import BmrCalc from './BmrCalc'
+import Input from './Input'
 
 export default class App extends Component {
     render() {
         return (
             <div>
-                <BmrCalc />
+                <Input />
             </div>
         )
     }
