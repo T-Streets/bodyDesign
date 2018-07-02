@@ -29,6 +29,7 @@ export default class Input extends Component {
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
+            BMR: this.getBMR()
         })
     }
 
@@ -38,11 +39,8 @@ export default class Input extends Component {
             return total
         }
         let total = Math.floor(66 + (6.2 * this.state.weight) + (12.7 * this.state.height) - (6.76 * this.state.age))
-        this.setState({
-            BMR: total
-        })
-        console.log(this.state)
         console.log(total)
+        return total
 
     }
 
